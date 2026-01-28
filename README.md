@@ -1,6 +1,6 @@
-# 图片生成视频和 GIF Skill
+# 图片生成 GIF Skill
 
-这是一个使用豆包 API 将图片转换为视频和 GIF 的 Claude Code Skill。
+这是一个使用豆包 API 将图片转换为 GIF 动图的 Claude Code Skill。
 
 ## 目录
 
@@ -205,23 +205,23 @@ duration = 5  # 视频时长（秒）
 在 Claude Code 中运行：
 
 ```bash
-/image-to-video <图片路径> <视频描述>
+/image-to-gif <图片路径> <动画描述>
 ```
 
 示例：
 
 ```bash
 # 使用自定义描述
-/image-to-video photo.jpg 女孩微笑着看向镜头，背景虚化
+/image-to-gif photo.jpg 女孩微笑着看向镜头，背景虚化
 
 # 使用默认描述
-/image-to-video photo.jpg
+/image-to-gif photo.jpg
 ```
 
 ### 方式 2: 直接运行 Python 脚本
 
 ```bash
-python3 scripts/image_to_video.py <图片路径> <视频描述>
+python3 scripts/image_to_video.py <图片路径> <动画描述>
 ```
 
 示例：
@@ -240,13 +240,13 @@ python3 scripts/image_to_video.py photo.jpg
 $ python3 scripts/image_to_video.py photo.jpg "女孩微笑着看向镜头"
 
 ============================================================
-图片生成视频 Skill
+图片生成 GIF Skill
 ============================================================
 
 正在加载 API Key...
 ✓ API Key 加载成功
 
-视频描述: 女孩微笑着看向镜头
+动画描述: 女孩微笑着看向镜头
 
 ------------------------------------------------------------
 步骤 1: 编码图片为 Base64...
@@ -414,12 +414,12 @@ A: 检查：
 5. 是否安装了所有依赖：`pip install requests`
 6. 是否安装了 ffmpeg：`ffmpeg -version`
 
-### Q: 如何自定义视频效果？
+### Q: 如何自定义动画效果？
 
-A: 在命令中提供详细的视频描述参数，例如：
+A: 在命令中提供详细的动画描述参数，例如：
 
 ```bash
-/image-to-video photo.jpg 镜头缓缓推进，人物微笑，背景虚化，添加动态光影效果
+/image-to-gif photo.jpg 镜头缓缓推进，人物微笑，背景虚化，添加动态光影效果
 ```
 
 ## API 说明
@@ -527,10 +527,10 @@ gif-skill/
 
 ### 模块说明
 
-- **image_to_video.py**: 主程序入口，协调各模块完成图片到视频和 GIF 的转换
+- **image_to_video.py**: 主程序入口，协调各模块完成图片到 GIF 的转换
 - **utils.py**: 工具函数模块，包含图片编码、API 密钥加载等辅助功能
 - **api.py**: API 交互模块，处理与豆包 API 的所有交互
-- **converter.py**: 视频转换模块，使用 ffmpeg 处理视频到 GIF 的高质量转换
+- **converter.py**: GIF 转换模块，使用 ffmpeg 处理视频到 GIF 的高质量转换
 
 ### 添加新功能
 

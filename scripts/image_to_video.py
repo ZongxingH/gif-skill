@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-图片生成视频 Skill
-使用豆包 API 将图片转换为视频，并自动生成 GIF
+图片生成 GIF Skill
+使用豆包 API 将图片转换为 GIF 动图
 """
 
 import sys
@@ -16,11 +16,11 @@ def main():
     # 解析命令行参数
     if len(sys.argv) < 2:
         print("=" * 60)
-        print("图片生成视频 Skill")
+        print("图片生成 GIF Skill")
         print("=" * 60)
         print()
         print("使用方法:")
-        print("  python3 scripts/image_to_video.py <图片路径> <视频描述>")
+        print("  python3 scripts/image_to_video.py <图片路径> <动画描述>")
         print()
         print("示例:")
         print("  python3 scripts/image_to_video.py photo.jpg '女孩微笑着看向镜头'")
@@ -31,7 +31,7 @@ def main():
     prompt = sys.argv[2] if len(sys.argv) > 2 else None
 
     print("=" * 60)
-    print("图片生成视频 Skill")
+    print("图片生成 GIF Skill")
     print("=" * 60)
     print()
 
@@ -50,7 +50,7 @@ def main():
         prompt = "女孩抱着狐狸，女孩睁开眼，温柔地看向镜头，狐狸友善地抱着，镜头缓缓拉出，女孩的头发被风吹动，可以听到风声"
         print(f"使用默认提示词: {prompt}")
     else:
-        print(f"视频描述: {prompt}")
+        print(f"动画描述: {prompt}")
     print()
 
     # 固定视频时长为 5 秒

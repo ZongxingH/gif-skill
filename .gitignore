@@ -1,0 +1,61 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# API Key (重要：不要提交 API 密钥)
+scripts/key
+
+# Videos output
+videos/*.mp4
+videos/*.avi
+videos/*.mov
+
+# GIFs output
+gifs/*.gif
+
+# Keep directories but ignore content
+!videos/.gitkeep
+!gifs/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment variables
+.env
+.env.local
+
+# Test files
+test_*.py
+*_test.py
